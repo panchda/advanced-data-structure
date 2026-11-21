@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Wizualizator drzew AVL i Splay Tree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interaktywna aplikacja przygotowana w React i TypeScript w ramach Projektu 2 – Zaawansowane struktury danych.
 
-Currently, two official plugins are available:
+Aplikacja umożliwia wizualizację działania drzew AVL i Splay Tree oraz obserwację zmian struktury podczas wykonywania operacji.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Uruchomienie
 
-## React Compiler
+W katalogu `visualizer` wykonaj:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Następnie otwórz adres wskazany w terminalu przez Vite.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Funkcjonalności
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Wybór drzewa AVL lub Splay Tree.
+- Wstawianie elementów (`Insert`).
+- Wyszukiwanie elementów (`Search`).
+- Usuwanie elementów (`Delete`).
+- Uruchamianie przykładowych operacji (`Run Example`).
+- Resetowanie stanu drzewa (`Reset`).
+- Przeglądanie historii operacji (`Previous` i `Next`).
 
+## Budowanie aplikacji
+
+```bash
+npm run build
 ```
+
+## Projekt główny
+
+Implementacje struktur danych, testy jednostkowe i pomiary wydajności znajdują się w katalogu głównym repozytorium.
+
+Repozytorium: https://github.com/panchda/advanced-data-structure
