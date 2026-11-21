@@ -1,6 +1,6 @@
 # Zaawansowane struktury danych – analiza efektywności operacji
 
-Projekt realizowany w ramach przedmiotu **Zaawansowane struktury danych**.
+Projekt realizowany w ramach przedmiotu **Projekt informatyczny: Zaawansowane zagadnienia algorytmiki i programowania (L1)**.
 
 ## Opis projektu
 
